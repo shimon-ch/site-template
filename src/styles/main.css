@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: red;
+
+  --secondary-color: #fff;
+}
+
+h1 {
+  color: var(--primary-color);
+}

@@ -1,0 +1,32 @@
+{
+  "name": "site-template",
+  "scripts": {
+    "dev": "npx rimraf dist/ && concurrently --raw \"rspack --watch --mode=development\" \"tailwindcss -i ./src/styles/main.css -o ./dist/assets/css/main.css --watch\" \"eleventy --serve --incremental\"",
+    "build": "cross-env NODE_ENV=production rspack build",
+    "postinstall": "patch-package"
+  },
+  "dependencies": {
+    "core-js": "^3.36.0",
+    "dom4": "^2.1.6",
+    "patch-package": "^8.0.0",
+    "regenerator-runtime": "^0.14.1"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@biomejs/biome": "^1.5.3",
+    "@rspack/cli": "0.5.4",
+    "@rspack/core": "0.5.4",
+    "@squoosh/cli": "^0.7.3",
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "markuplint": "^4.1.1",
+    "rimraf": "^5.0.5",
+    "rollup-plugin-postcss": "^4.0.2",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "private": true
+}
